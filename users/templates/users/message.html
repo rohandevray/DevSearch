@@ -4,9 +4,13 @@
   <main class="messagePage my-xl">
     <div class="content-box">
       <div class="message">
-        <a class="backButton" href="{% url 'inbox' %}"><i class="im im-angle-left"></i></a>
+        <a class="backButton" href="{% url 'inbox' %}"><i class="im im-angle-left">&#x2190;</i></a>
         <h2 class="message__subject">{{mainMessage.subject}}</h4>
-          <a href="" class="message__author">{{profile.owner.name}}</a>
+          {% if mainMessage.sender.id %}
+          <a href="{% url 'user-profile' mainMessage.sender.id %}" class="message__author">{{mainMessage.name}}</a>
+          {% else %}
+          <a class="message__author">{{mainMessage.name}}</a>
+          {% endif %}
           <p class="message__date">{{mainMessage.created}}</p>
           <div class="message__body">
             {{mainMessage.body|linebreaksbr}}

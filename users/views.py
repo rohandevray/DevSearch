@@ -157,7 +157,7 @@ def viewMessage(request,pk):
     if mainMessage.is_read == False:
         mainMessage.is_read = True
         mainMessage.save()
-    context={'mainMessage':mainMessage,'profile':profile}
+    context={'mainMessage':mainMessage}
     return render(request,"users/message.html",context)
 
 def sendMessage(request,pk):

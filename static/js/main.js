@@ -23,6 +23,7 @@ if (searchForm) {
 
 
 
+
 // let tags = document.getElementsByClassName('project-tag')
 
 // for (let i = 0; tags.length > i; i++) {
