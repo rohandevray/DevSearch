@@ -1,1 +1,1 @@
-web: gunicorn noobcoders.wsgi --log-file -
+web: gunicorn 'noobcoders.wsgi'
