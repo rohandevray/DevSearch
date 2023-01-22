@@ -29,7 +29,7 @@ ALLOWED_HOSTS = ["noobcoders-production.up.railway.app"]
 
 
 # Application definition
-CSRF_TRUSTED_ORIGINS = ["noobcoders-production.up.railway.app"]
+CSRF_TRUSTED_ORIGINS = ['https://noobcoders-production.up.railway.app/']
 
 
 INSTALLED_APPS = [
